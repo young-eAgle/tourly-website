@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa&family=Fredoka+One&family=Kanit:wght@300;400;500&family=Mitr:wght@400;500&family=Monoton&family=Noto+Sans&family=PT+Sans:wght@700&family=Roboto:wght@700&family=Russo+One&family=Signika+Negative:wght@400;600&family=Varela+Round&display=swap');
+
+/* font-family: 'Anton', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Kanit', sans-serif;
+font-family: 'Mitr', sans-serif;
+font-family: 'Monoton', cursive;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Russo One', sans-serif;
+font-family: 'Signika Negative', sans-serif;
+font-family: 'Varela Round', sans-serif; */
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+  --fixed-width: 450px;
+  --clr-orange-1: hsl(12, 83%, 98%);
+  --clr-orange-2: hsl(14, 91%, 95%);
+  --clr-orange-3: hsl(12, 89%, 89%);
+  --clr-orange-4: hsl(13, 87%, 82%);
+  --clr-orange-5: hsl(13, 88%, 68%);
+  --clr-orange-6: hsl(13, 88%, 55%);
+  --clr-orange-7: hsl(13, 74%, 49%);
+  --clr-orange-8: hsl(13, 74%, 33%);
+  --clr-orange-9: hsl(13, 73%, 25%);
+  --clr-orange-10: hsl(13, 73%, 16%);
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  /* line-height: 1.25; */
+  margin-bottom: 0.75rem;
+
+  font-family: 'Russo One', sans-serif;
+}
+img {
+  margin-bottom: -0.4rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+}
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+/*
+=============== 
+TOURLY WEBSITE
+===============
+*/
+
+header {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(12, 0, 38, 0.7),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url('./assets/images/hero-banner.jpg');
+  background-position: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: WHITE;
+}
+
+/* ======
+TOP-SECTION
+========== */
+
+.top-section {
+  display: flex;
+  border-bottom: 3px solid burlywood;
+  align-items: center;
+}
+.header-btn-container {
+  display: flex;
+}
+
+.header-btn-container button {
+  background: none;
+  color: white;
+  border: none;
+
+  cursor: pointer;
+}
+/* ======
+BOTTOM-SECTION
+========== */
+nav {
+  display: flex;
+
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 25px;
+  margin: 10px 10px;
+}
+.icon a {
+  color: white;
+}
+
+.detail {
+  display: flex;
+
+  align-items: center;
+}
+
+.phone {
+  border: 2px solid rgb(150, 154, 156);
+  border-radius: 50px;
+
+  margin: 0 5px;
+  background: rgb(0, 162, 255);
+}
+
+nav ul {
+  display: flex;
+}
+.list {
+  margin: 10px 10px;
+}
+.list a {
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+}
+nav ul li a:hover {
+  color: slateblue;
+}
+
+.book-btn {
+  background: rgb(0, 128, 255);
+  color: rgb(255, 255, 255);
+
+  font-weight: 900;
+  font-family: 'Comfortaa', cursive;
+  border-radius: 30px;
+  cursor: pointer;
+  border: transparent;
+}
+.book-btn:hover {
+  background: white;
+  color: black;
+}
+
+/*
+=============== 
+Home Section
+===============
+*/
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 30vh; */
+  text-align: center;
+  height: 100vh;
+}
+.Home-text {
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 900;
+}
+.lorem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+}
+.Home-button {
+  margin-top: 3rem;
+}
+.Home-button button {
+  padding: 10px 15px;
+}
+
+/*
+=============== 
+Date Section
+===============
+*/
+.Register-section {
+  background: rgb(0, 47, 255);
+}
+.Register-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  flex-wrap: wrap;
+  font-family: 'Varela Round', sans-serif;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+.input label {
+  font-size: 25px;
+  font-weight: 900;
+}
+input {
+  padding: 20px 15px;
+  border-radius: 30px;
+  width: 230px;
+  color: blueviolet;
+  font-size: 20px;
+  font-family: Varela Round;
+  font-weight: 900;
+}
+
+.inquire-btn button {
+  margin-top: 2.4rem;
+  font-family: Varela Round;
+  background: black;
+  color: #fff;
+  font-weight: 900;
+  width: 230px;
+  padding: 18px 15px;
+}
+
+/* ==========
+UNCOVER-SECTION
+================ */
+.uncover-section {
+  background: rgb(210, 210, 210);
+}
+.uncover {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.uncover p {
+  text-align: center;
+}
+.uncover-center {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.itlay {
+  border-radius: 20px;
+}
+.tour-place {
+  position: relative;
+  margin: 10px;
+}
+.tour-detail {
+  background: rgb(255, 255, 255);
+  position: absolute;
+
+  bottom: 0.9rem;
+
+  border-radius: 15px;
+}
+.destination-btn {
+  text-align: center;
+  padding: 10px;
+}
+
+/*
+=============== 
+Package Section
+===============
+*/
+
+.package-list {
+  width: 90vw;
+  margin: 0 auto;
+}
+.package-list li {
+  display: flex;
+  background: burlywood;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+@media screen and (max-width: 1220px) {
+  .package-list li {
+    flex-direction: column;
+    align-items: center;
+  }
+  .package-card img {
+    width: 90vw;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .card-price {
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .book-btn {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1221px) {
+  p {
+    font-size: 1rem;
+  }
+  .package-card img {
+    width: 30vw;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .card-content {
+    width: 40%;
+  }
+  .card-price {
+    width: 30%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+.package-card img {
+  background: #222;
+}
+.card-content {
+  padding: 20px 10px;
+}
+.card-meta-list {
+  display: flex;
+  background: slategrey;
+  border-radius: 20px;
+  justify-content: center;
+}
+.card-meta-list .card-meta-item {
+  /* margin-left: 5px; */
+  background: transparent;
+  padding: 0 10px;
+  border-right: 3px solid rgb(0, 0, 0);
+  border-radius: 0;
+}
+.card-meta-list .last-item {
+  border-right: 0;
+}
+.card-price {
+  background: slateblue;
+
+  display: grid;
+
+  place-content: center;
+  font-size: 25px;
+}
+.price {
+  font-size: 6.5rem;
+  font-family: 'Fredoka One', cursive;
+}
+/*
+==================
+Gallery Section
+================== */
+.gallery-center {
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+}
+.gallery-center img {
+  object-fit: cover;
+}
+.top-two img {
+  border-radius: 10px;
+  margin: 5px;
+  /* height: 412px; */
+}
+.middle img {
+  border-radius: 10px;
+  /* height: 840px; */
+}
+.last-two img {
+  border-radius: 10px;
+  margin: 5px;
+  /* height: 412px; */
+  /* padding-bottom: 20px; */
+}
+
+/*
+===============
+contact section 
+===============
+*/
+.contact-section {
+  background: slateblue;
+  /* height: 70vh; */
+  padding: 3rem 0;
+}
+
+.contact-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+}
+.call-section {
+  width: 70%;
+}
+.button-section {
+  display: flex;
+  align-items: center;
+}
+
+/*
+=============== 
+FOOTER SECTION
+===============
+
+*/
+footer {
+  background: black;
+}
+.footer-section {
+  color: white;
+  padding: 1rem;
+  background: rgb(12, 0, 91);
+  display: flex;
+
+  /* width: 80vw; */
+  /* margin: 0 auto; */
+}
+
+.section-1 img {
+  margin-bottom: 1rem;
+}
+.contact {
+  margin: 20px 0;
+}
+
+.section-3 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.email-input {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/*
+=============== 
+NAVBAR SECTION
+===============
+
+*/
+
+.navbar-center {
+  color: white;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.policy li {
+  cursor: pointer;
+}
+/*
+=============== 
+MEDIA QUERIES
+===============
+
+*/
+@media screen and (max-width: 1150px) {
+  .top-section {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .bar-btn {
+    display: block;
+  }
+  .ul-list {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: gray;
+    height: 100vh;
+    z-index: -999;
+    width: 0;
+    overflow: hidden;
+  }
+  .show-bar {
+    z-index: 999;
+    width: 45vw;
+    overflow: auto;
+  }
+  .Xmark-btn {
+    position: absolute;
+    display: block;
+
+    top: 30px;
+    right: 30px;
+  }
+  .gallery-center {
+    flex-direction: column;
+  }
+
+  .top-two img {
+    width: 90vw;
+  }
+  .middle img {
+    width: 90vw;
+  }
+  .last-two img {
+    width: 90vw;
+  }
+  .contact-section {
+    display: flex;
+  }
+  .contact-center {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-section {
+    margin-top: 2rem;
+  }
+  .footer-section {
+    flex-direction: column;
+  }
+  .navbar-center {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1151px) {
+  .top-section {
+    justify-content: space-around;
+  }
+
+  nav {
+    justify-content: space-around;
+  }
+
+  .icons {
+    margin-left: 8rem;
+  }
+  .tour-icon {
+    margin-left: -30px;
+  }
+  .bar-btn {
+    display: none;
+  }
+  .Xmark-btn {
+    display: none;
+  }
+  .top-two img {
+    width: 30vw;
+    height: 412px;
+  }
+  .middle img {
+    width: 30vw;
+    height: 840px;
+  }
+  .last-two img {
+    width: 30vw;
+    height: 412px;
+  }
+  .contact-section {
+    display: grid;
+    place-content: center;
+  }
+  .contact-center {
+    justify-content: space-around;
+  }
+  .footer-section {
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .section-1 {
+    width: 30vw;
+  }
+}
+@media screen and (max-width: 880px) {
+  .Register-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .top-section {
+    padding-top: 10px;
+  }
+  .header-btn-container button {
+    font-size: 4.5vw;
+  }
+
+  .inquries p {
+    font-size: 3.5vw;
+  }
+  .tour-logo {
+    width: 30vw;
+  }
+  .Home-text {
+    font-size: 10w;
+    width: 90vw;
+  }
+  .Home-button button {
+    margin: 10px 0;
+  }
+  .uncover p {
+    width: 80vw;
+  }
+  .itlay {
+    width: 70vw;
+  }
+  .tour-detail {
+    width: 65vw;
+    left: 0.7rem;
+    padding: 5px;
+  }
+  .uncover-center h3 {
+    font-size: 3.5vw;
+  }
+  .uncover-center p {
+    font-size: 2.5vw;
+  }
+  .book-btn {
+    padding: 10px 14px;
+    font-size: 5.5vw;
+    margin: 10px 0;
+  }
+  .phone {
+    padding: 3.5px 6px;
+  }
+
+  .phone-btn {
+    font-size: 15px;
+  }
+  .search {
+    display: none;
+  }
+  .traveller {
+    font-size: 8vw;
+  }
+  .policy li {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (min-width: 501px) {
+  .header-btn-container button {
+    font-size: 25px;
+    padding: 0 5px;
+  }
+
+  .inquires p {
+    font-size: 25px;
+  }
+  .Home-text {
+    font-size: 4rem;
+  }
+  .uncover p {
+    width: 70vw;
+  }
+  .itlay {
+    width: 400px;
+  }
+  .tour-detail {
+    width: 370px;
+    left: 1rem;
+    padding: 20px;
+  }
+  .uncover-center h2 {
+    font-size: 30px;
+  }
+  .uncover-center p {
+    font-size: 15px;
+  }
+  .book-btn {
+    padding: 10px 14px;
+    font-size: 25px;
+  }
+  .phone {
+    padding: 8px 10px;
+  }
+  .phone-btn {
+    font-size: 25px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .lorem {
+    font-size: 1.4rem;
+  }
+  .policy li {
+    margin: 0 10px;
+  }
+}
